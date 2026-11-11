@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="وب‌سایت معرفی معدن؛ اطلاعات، مشخصات، تصاویر و راه‌های ارتباطی">
+<title>معدن نمونه | معرفی معدن</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --dark:#202522;
+  --dark2:#303a34;
+  --gold:#c9a45c;
+  --light:#f5f4ef;
+  --white:#fff;
+  --muted:#777d77;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--light);color:var(--dark);line-height:1.9}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+header{background:var(--dark);color:white;position:sticky;top:0;z-index:10}
+.nav{max-width:1150px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:21px;font-weight:800;color:var(--gold)}
+nav{display:flex;gap:23px;flex-wrap:wrap}
+nav a{font-size:14px;color:#eee;transition:.2s}
+nav a:hover,nav a.active{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.container{max-width:1100px;margin:auto;padding:65px 22px}
+
+.hero{
+  background:
+  linear-gradient(90deg,rgba(20,27,23,.88),rgba(20,27,23,.45)),
+  url('uichemy_images/image_01.webp') center/cover;
+  min-height:490px;
+  display:flex;
+  align-items:center;
+  color:white
+}
+
+.hero-content{max-width:1100px;margin:auto;padding:50px 22px;width:100%}
+.hero h1{font-size:clamp(30px,5vw,52px);max-width:650px;line-height:1.5}
+.hero p{max-width:600px;color:#e2e2dc;margin:20px 0 28px}
+.btn{display:inline-block;padding:11px 25px;background:var(--gold);color:#1e241f;border-radius:5px;font-weight:700;margin:5px 0}
+.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.section-title{font-size:28px;margin-bottom:12px}
+.section-intro{color:var(--muted);margin-bottom:30px;max-width:750px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:25px;border-radius:9px;border:1px solid #e9e7df}
+.card h3{font-size:18px;margin-bottom:9px}
+.card p{font-size:14px;color:var(--muted)}
+.card .number{font-size:28px;color:var(--gold);font-weight:800}
+.dark-section{background:var(--dark);color:white}
+.dark-section .section-intro{color:#c3c6c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.stat{padding:20px;border:1px solid #596057;border-radius:8px;text-align:center}
+.stat strong{display:block;color:var(--gold);font-size:22px}
+.stat span{font-size:13px;color:#ddd}
+.page{display:none;min-height:65vh}
+.page.active{display:block}
+.page-banner{background:var(--dark2);color:white;padding:55px 22px}
+.page-banner h1{max-width:1100px;margin:auto;font-size:32px}
+.page-banner p{max-width:1100px;margin:10px auto 0;color:#d7d9d4}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery figure{background:white;border-radius:8px;overflow:hidden}
+.gallery img{width:100%;height:210px;object-fit:cover;display:block;background:#ddd}
+.gallery figcaption{padding:12px;font-size:14px}
+.faq details{background:white;padding:18px 22px;border-radius:7px;margin:12px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);font-size:14px;padding-top:12px}
+.contact-box{background:white;padding:28px;border-radius:9px}
+footer{background:#171d19;color:white;padding:35px 22px}
+.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+footer p,footer a{font-size:13px;color:#c5c8c2}
+footer a:hover{color:var(--gold)}
+.footer-links{display:flex;gap:17px;flex-wrap:wrap}
+.notice{background:#f0e8d6;border-right:4px solid var(--gold);padding:15px 18px;margin:20px 0;font-size:14px}
+
+@media(max-width:760px){
+ nav{display:none;position:absolute;top:65px;right:0;left:0;background:var(--dark);padding:20px;flex-direction:column;gap:12px}
+ nav.open{display:flex}
+ .menu{display:block}
+ .grid,.gallery{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr}
+ .hero{min-height:430px}
+ .container{padding:45px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="nav">
+  <a class="logo" href="#home">معدن نمونه</a>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="باز کردن منو">☰</button>
+  <nav id="navigation">
+   <a href="#home">صفحه اصلی</a>
+   <a href="#introduction">معرفی معدن</a>
+   <a href="#gallery">گالری تصاویر</a>
+   <a href="#about">درباره ما</a>
+   <a href="#contact">تماس با ما</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section id="home" class="page active">
+ <div class="hero">
+  <div class="hero-content">
+   <h1>آشنایی با معدن و فعالیت‌های آن</h1>
+   <p>در این وب‌سایت اطلاعات پایه، حوزه فعالیت، مشخصات فنی، تصاویر و راه‌های ارتباط با مجموعه ارائه می‌شود.</p>
+   <a class="btn" href="#introduction">معرفی معدن</a>
+   <a class="btn outline" href="#gallery">مشاهده تصاویر</a>
+  </div>
+ </div>
+
+ <div class="container">
+  <h2 class="section-title">بخش‌های اصلی معرفی معدن</h2>
+  <p class="section-intro">در این بخش با اطلاعات پایه، مواد معدنی، تجهیزات، فرآیند فعالیت و تصاویر معدن آشنا می‌شوید.</p>
+  <div class="grid">
+   <article class="card"><div class="number">۰۱</div><h3>مشخصات معدن</h3><p>اطلاعات ثبتی، موقعیت جغرافیایی و مشخصات پایه معدن.</p></article>
+   <article class="card"><div class="number">۰۲</div><h3>مواد معدنی</h3><p>معرفی نوع ماده معدنی و ویژگی‌های فنی آن.</p></article>
+   <article class="card"><div class="number">۰۳</div><h3>تجهیزات و ماشین‌آلات</h3><p>معرفی تجهیزات و ماشین‌آلات مورد استفاده.</p></article>
+  </div>
+ </div>
+
+ <div class="dark-section">
+  <div class="container">
+   <h2 class="section-title">اطلاعات تکمیلی معدن</h2>
+   <p class="section-intro">مشخصات فنی و آماری پس از دریافت مستندات معتبر منتشر می‌شوند.</p>
+   <div class="stats">
+    <div class="stat"><strong>اعلام نشده</strong><span>ظرفیت تولید</span></div>
+    <div class="stat"><strong>اعلام نشده</strong><span>ذخیره معدن</span></div>
+    <div class="stat"><strong>اعلام نشده</strong><span>سال تأسیس</span></div>
+   </div>
+  </div>
+ </div>
+
+ <div class="container">
+  <h2 class="section-title">پرسش‌های متداول معدن</h2>
+  <div class="faq">
+   <details><summary>معدن در کدام منطقه قرار دارد؟</summary><p>موقعیت دقیق معدن هنوز اعلام نشده است. استان، شهرستان و مختصات جغرافیایی پس از تأیید مجموعه درج می‌شود.</p></details>
+   <details><summary>چه نوع ماده معدنی استخراج می‌شود؟</summary><p>نوع ماده معدنی هنوز مشخص نشده است. اطلاعات فنی پس از دریافت مستندات معتبر منتشر خواهد شد.</p></details>
+   <details><summary>ظرفیت استخراج یا تولید معدن چقدر است؟</summary><p>ظرفیت استخراج و تولید اعلام نشده است. فقط ارقام مستند و تأییدشده منتشر می‌شوند.</p></details>
+   <details><summary>آیا معدن دارای مجوز بهره‌برداری است؟</summary><p>وضعیت مجوزها هنوز اعلام نشده است. اطلاعات پروانه پس از بررسی مدارک رسمی منتشر خواهد شد.</p></details>
+   <details><summary>روش استخراج و فرآوری مواد معدنی چیست؟</summary><p>روش استخراج و فرآوری به نوع ماده معدنی و شرایط فنی معدن بستگی دارد. جزئیات پس از تأیید کارشناسان مجموعه درج می‌شود.</p></details>
+   <details><summary>چگونه می‌توان برای همکاری یا بازدید هماهنگ کرد؟</summary><p>برای درخواست همکاری یا هماهنگی بازدید از طریق صفحه تماس با ما اقدام کنید. امکان بازدید باید به تأیید مسئولان معدن برسد.</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="introduction" class="page">
+ <div class="page-banner"><h1>معرفی معدن</h1><p>اطلاعات پایه، موقعیت، ماده معدنی و مشخصات فنی معدن</p></div>
+ <div class="container">
+  <h2 class="section-title">مشخصات پایه معدن</h2>
+  <p class="section-intro">اطلاعات زیر پس از دریافت و تأیید مدارک رسمی تکمیل خواهند شد.</p>
+  <div class="grid">
+   <article class="card"><h3>موقعیت جغرافیایی</h3><p>استان و شهرستان: اعلام نشده</p></article>
+   <article class="card"><h3>نوع ماده معدنی</h3><p>نوع ماده معدنی: اعلام نشده</p></article>
+   <article class="card"><h3>ظرفیت تولید</h3><p>ظرفیت تولید: اعلام نشده</p></article>
+   <article class="card"><h3>روش استخراج</h3><p>پس از دریافت اطلاعات فنی معرفی می‌شود.</p></article>
+   <article class="card"><h3>تجهیزات و ماشین‌آلات</h3><p>فهرست تجهیزات پس از دریافت اطلاعات تکمیل می‌شود.</p></article>
+   <article class="card"><h3>ایمنی و محیط‌زیست</h3><p>اطلاعات مربوط به الزامات ایمنی و محیط‌زیست پس از تأیید مجموعه منتشر می‌شود.</p></article>
+  </div>
+  <div class="notice">اطلاعات فنی و آماری بدون مستندات معتبر منتشر نخواهند شد.</div>
+  <a class="btn" href="#contact">درخواست اطلاعات بیشتر</a>
+ </div>
+</section>
+
+<section id="gallery" class="page">
+ <div class="page-banner"><h1>گالری تصاویر معدن</h1><p>تصاویر محدوده، تجهیزات و فعالیت‌های معدن</p></div>
+ <div class="container">
+  <p class="section-intro">تصاویر واقعی معدن و تجهیزات در این بخش نمایش داده می‌شوند.</p>
+  <div class="gallery" id="mineGallery">
+   <figure><img src="uichemy_images/image_02.webp" alt="تصویر معدن ۲" loading="lazy"><figcaption>تصویر معدن ۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_03.webp" alt="تصویر معدن ۳" loading="lazy"><figcaption>تصویر معدن ۳</figcaption></figure>
+   <figure><img src="uichemy_images/image_04.webp" alt="تصویر معدن ۴" loading="lazy"><figcaption>تصویر معدن ۴</figcaption></figure>
+   <figure><img src="uichemy_images/image_05.webp" alt="تصویر معدن ۵" loading="lazy"><figcaption>تصویر معدن ۵</figcaption></figure>
+   <figure><img src="uichemy_images/image_06.webp" alt="تصویر معدن ۶" loading="lazy"><figcaption>تصویر معدن ۶</figcaption></figure>
+   <figure><img src="uichemy_images/image_07.webp" alt="تصویر معدن ۷" loading="lazy"><figcaption>تصویر معدن ۷</figcaption></figure>
+   <figure><img src="uichemy_images/image_08.webp" alt="تصویر معدن ۸" loading="lazy"><figcaption>تصویر معدن ۸</figcaption></figure>
+   <figure><img src="uichemy_images/image_09.webp" alt="تصویر معدن ۹" loading="lazy"><figcaption>تصویر معدن ۹</figcaption></figure>
+   <figure><img src="uichemy_images/image_10.webp" alt="تصویر معدن ۱۰" loading="lazy"><figcaption>تصویر معدن ۱۰</figcaption></figure>
+   <figure><img src="uichemy_images/image_11.webp" alt="تصویر معدن ۱۱" loading="lazy"><figcaption>تصویر معدن ۱۱</figcaption></figure>
+   <figure><img src="uichemy_images/image_12.webp" alt="تصویر معدن ۱۲" loading="lazy"><figcaption>تصویر معدن ۱۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_13.webp" alt="تصویر معدن ۱۳" loading="lazy"><figcaption>تصویر معدن ۱۳</figcaption></figure>
+   <figure><img src="uichemy_images/image_14.webp" alt="تصویر معدن ۱۴" loading="lazy"><figcaption>تصویر معدن ۱۴</figcaption></figure>
+   <figure><img src="uichemy_images/image_15.webp" alt="تصویر معدن ۱۵" loading="lazy"><figcaption>تصویر معدن ۱۵</figcaption></figure>
+   <figure><img src="uichemy_images/image_16.webp" alt="تصویر معدن ۱۶" loading="lazy"><figcaption>تصویر معدن ۱۶</figcaption></figure>
+   <figure><img src="uichemy_images/image_17.webp" alt="تصویر معدن ۱۷" loading="lazy"><figcaption>تصویر معدن ۱۷</figcaption></figure>
+   <figure><img src="uichemy_images/image_18.webp" alt="تصویر معدن ۱۸" loading="lazy"><figcaption>تصویر معدن ۱۸</figcaption></figure>
+   <figure><img src="uichemy_images/image_19.webp" alt="تصویر معدن ۱۹" loading="lazy"><figcaption>تصویر معدن ۱۹</figcaption></figure>
+   <figure><img src="uichemy_images/image_20.webp" alt="تصویر معدن ۲۰" loading="lazy"><figcaption>تصویر معدن ۲۰</figcaption></figure>
+   <figure><img src="uichemy_images/image_21.webp" alt="تصویر معدن ۲۱" loading="lazy"><figcaption>تصویر معدن ۲۱</figcaption></figure>
+   <figure><img src="uichemy_images/image_22.webp" alt="تصویر معدن ۲۲" loading="lazy"><figcaption>تصویر معدن ۲۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_23.webp" alt="تصویر معدن ۲۳" loading="lazy"><figcaption>تصویر معدن ۲۳</figcaption></figure>
+   <figure><img src="uichemy_images/image_24.webp" alt="تصویر معدن ۲۴" loading="lazy"><figcaption>تصویر معدن ۲۴</figcaption></figure>
+   <figure><img src="uichemy_images/image_25.webp" alt="تصویر معدن ۲۵" loading="lazy"><figcaption>تصویر معدن ۲۵</figcaption></figure>
+   <figure><img src="uichemy_images/image_26.webp" alt="تصویر معدن ۲۶" loading="lazy"><figcaption>تصویر معدن ۲۶</figcaption></figure>
+   <figure><img src="uichemy_images/image_27.webp" alt="تصویر معدن ۲۷" loading="lazy"><figcaption>تصویر معدن ۲۷</figcaption></figure>
+   <figure><img src="uichemy_images/image_28.webp" alt="تصویر معدن ۲۸" loading="lazy"><figcaption>تصویر معدن ۲۸</figcaption></figure>
+   <figure><img src="uichemy_images/image_29.webp" alt="تصویر معدن ۲۹" loading="lazy"><figcaption>تصویر معدن ۲۹</figcaption></figure>
+   <figure><img src="uichemy_images/image_30.webp" alt="تصویر معدن ۳۰" loading="lazy"><figcaption>تصویر معدن ۳۰</figcaption></figure>
+   <figure><img src="uichemy_images/image_31.webp" alt="تصویر معدن ۳۱" loading="lazy"><figcaption>تصویر معدن ۳۱</figcaption></figure>
+   <figure><img src="uichemy_images/image_32.webp" alt="تصویر معدن ۳۲" loading="lazy"><figcaption>تصویر معدن ۳۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_33.webp" alt="تصویر معدن ۳۳" loading="lazy"><figcaption>تصویر معدن ۳۳</figcaption></figure>
+   <figure><img src="uichemy_images/image_34.webp" alt="تصویر معدن ۳۴" loading="lazy"><figcaption>تصویر معدن ۳۴</figcaption></figure>
+   <figure><img src="uichemy_images/image_35.webp" alt="تصویر معدن ۳۵" loading="lazy"><figcaption>تصویر معدن ۳۵</figcaption></figure>
+   <figure><img src="uichemy_images/image_36.webp" alt="تصویر معدن ۳۶" loading="lazy"><figcaption>تصویر معدن ۳۶</figcaption></figure>
+   <figure><img src="uichemy_images/image_37.webp" alt="تصویر معدن ۳۷" loading="lazy"><figcaption>تصویر معدن ۳۷</figcaption></figure>
+   <figure><img src="uichemy_images/image_38.webp" alt="تصویر معدن ۳۸" loading="lazy"><figcaption>تصویر معدن ۳۸</figcaption></figure>
+   <figure><img src="uichemy_images/image_39.webp" alt="تصویر معدن ۳۹" loading="lazy"><figcaption>تصویر معدن ۳۹</figcaption></figure>
+   <figure><img src="uichemy_images/image_40.webp" alt="تصویر معدن ۴۰" loading="lazy"><figcaption>تصویر معدن ۴۰</figcaption></figure>
+   <figure><img src="uichemy_images/image_41.webp" alt="تصویر معدن ۴۱" loading="lazy"><figcaption>تصویر معدن ۴۱</figcaption></figure>
+   <figure><img src="uichemy_images/image_42.webp" alt="تصویر معدن ۴۲" loading="lazy"><figcaption>تصویر معدن ۴۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_43.webp" alt="تصویر معدن ۴۳" loading="lazy"><figcaption>تصویر معدن ۴۳</figcaption></figure>
+   <figure><img src="uichemy_images/image_44.webp" alt="تصویر معدن ۴۴" loading="lazy"><figcaption>تصویر معدن ۴۴</figcaption></figure>
+   <figure><img src="uichemy_images/image_45.webp" alt="تصویر معدن ۴۵" loading="lazy"><figcaption>تصویر معدن ۴۵</figcaption></figure>
+   <figure><img src="uichemy_images/image_46.webp" alt="تصویر معدن ۴۶" loading="lazy"><figcaption>تصویر معدن ۴۶</figcaption></figure>
+   <figure><img src="uichemy_images/image_47.webp" alt="تصویر معدن ۴۷" loading="lazy"><figcaption>تصویر معدن ۴۷</figcaption></figure>
+   <figure><img src="uichemy_images/image_48.webp" alt="تصویر معدن ۴۸" loading="lazy"><figcaption>تصویر معدن ۴۸</figcaption></figure>
+   <figure><img src="uichemy_images/image_49.webp" alt="تصویر معدن ۴۹" loading="lazy"><figcaption>تصویر معدن ۴۹</figcaption></figure>
+   <figure><img src="uichemy_images/image_50.webp" alt="تصویر معدن ۵۰" loading="lazy"><figcaption>تصویر معدن ۵۰</figcaption></figure>
+   <figure><img src="uichemy_images/image_51.webp" alt="تصویر معدن ۵۱" loading="lazy"><figcaption>تصویر معدن ۵۱</figcaption></figure>
+   <figure><img src="uichemy_images/image_52.webp" alt="تصویر معدن ۵۲" loading="lazy"><figcaption>تصویر معدن ۵۲</figcaption></figure>
+   <figure><img src="uichemy_images/image_53.webp" alt="تصویر معدن ۵۳" loading="lazy"><figcaption>تصویر معدن ۵۳</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="page">
+ <div class="page-banner"><h1>درباره معدن</h1><p>معرفی مجموعه معدنی</p></div>
+ <div class="container">
+  <h2 class="section-title">معرفی مجموعه</h2>
+  <p class="section-intro">این بخش برای معرفی تاریخچه، اهداف، ساختار و رویکرد مجموعه طراحی شده است. اطلاعات نهایی پس از دریافت توضیحات رسمی تکمیل خواهد شد.</p>
+  <div class="grid">
+   <article class="card"><h3>تاریخچه مجموعه</h3><p>سوابق و تاریخچه معدن پس از تأیید رسمی منتشر می‌شود.</p></article>
+   <article class="card"><h3>شفافیت اطلاعات</h3><p>اطلاعات فنی و آماری بر پایه مستندات معتبر ارائه می‌شوند.</p></article>
+   <article class="card"><h3>ایمنی و مسئولیت</h3><p>رویکرد مجموعه در زمینه ایمنی کارکنان و حفاظت از محیط‌زیست در این قسمت معرفی خواهد شد.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="page">
+ <div class="page-banner"><h1>تماس با ما</h1><p>راه‌های ارتباطی با مجموعه معدنی</p></div>
+ <div class="container">
+  <div class="contact-box">
+   <h2 class="section-title">ارتباط با معدن</h2>
+   <p>برای دریافت اطلاعات، طرح پرسش یا درخواست همکاری با مجموعه در ارتباط باشید.</p>
+   <div class="notice">شماره تماس، ایمیل و نشانی پس از دریافت اطلاعات رسمی در این قسمت درج می‌شوند.</div>
+   <p><strong>تلفن:</strong> اعلام نشده</p>
+   <p><strong>ایمیل:</strong> اعلام نشده</p>
+   <p><strong>نشانی:</strong> اعلام نشده</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="footer-inner">
+  <div><h3 style="color:#c9a45c">معدن نمونه</h3><p>وب‌سایت معرفی معدن و فعالیت‌های آن</p></div>
+  <div class="footer-links">
+   <a href="#home">خانه</a><a href="#introduction">معرفی معدن</a>
+   <a href="#gallery">گالری</a><a href="#about">درباره ما</a><a href="#contact">تماس</a>
+  </div>
+  <p>تمامی اطلاعات فنی پس از بررسی و تأیید منتشر می‌شوند.</p>
+ </div>
+</footer>
+
+<script>
+function showPage(){
+ const id=location.hash.slice(1)||'home';
+ const valid=['home','introduction','gallery','about','contact'];
+ const target=valid.includes(id)?id:'home';
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(target).classList.add('active');
+ document.querySelectorAll('nav a').forEach(a=>{
+   a.classList.toggle('active',a.getAttribute('href')==='#'+target);
+ });
+ document.querySelector('nav').classList.remove('open');
+ window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',showPage);
+window.addEventListener('DOMContentLoaded',showPage);
+</script>
+</body>
+</html>
